@@ -62,7 +62,7 @@
     <div class="row">
 
         <div class="video-container">
-            <video src="images/about-vid.mp4" loop autoplay muted></video>
+            <video src="{{asset('template/images/about-vid.mp4')}}" loop autoplay muted></video>
             <h3>best flower sellers</h3>
         </div>
 
@@ -84,7 +84,7 @@
 <section class="icons-container">
 
     <div class="icons">
-        <img src="images/icon-1.png" alt="">
+        <img src="{{asset('template/images/icon-1.png')}}" alt="">
         <div class="info">
             <h3>free delivery</h3>
             <span>on all orders</span>
@@ -92,7 +92,7 @@
     </div>
 
     <div class="icons">
-        <img src="images/icon-2.png" alt="">
+        <img src="{{asset('template/images/icon-2.png')}}" alt="">
         <div class="info">
             <h3>10 days returns</h3>
             <span>moneyback guarantee</span>
@@ -100,7 +100,7 @@
     </div>
 
     <div class="icons">
-        <img src="images/icon-3.png" alt="">
+        <img src="{{asset('template/images/icon-3.png')}}" alt="">
         <div class="info">
             <h3>offer & gifts</h3>
             <span>on all orders</span>
@@ -108,7 +108,7 @@
     </div>
 
     <div class="icons">
-        <img src="images/icon-4.png" alt="">
+        <img src="{{asset('template/images/icon-4.png')}}" alt="">
         <div class="info">
             <h3>secure paymens</h3>
             <span>protected by paypal</span>
@@ -130,7 +130,7 @@
         <div class="box">
             <span class="discount">-10%</span>
             <div class="image">
-                <img src="images/img-1.jpg" alt="">
+                <img src="{{asset('template/images/img-1.jpg')}}" alt="">
                 <div class="icons">
                     <a href="#" class="fas fa-heart"></a>
                     <a href="#" class="cart-btn">add to cart</a>
@@ -146,7 +146,7 @@
         <div class="box">
             <span class="discount">-15%</span>
             <div class="image">
-                <img src="images/img-2.jpg" alt="">
+                <img src="{{asset('template/images/img-2.jpg')}}" alt="">
                 <div class="icons">
                     <a href="#" class="fas fa-heart"></a>
                     <a href="#" class="cart-btn">add to cart</a>
@@ -162,7 +162,7 @@
         <div class="box">
             <span class="discount">-5%</span>
             <div class="image">
-                <img src="images/img-3.jpg" alt="">
+                <img src="{{asset('template/images/img-3.jpg')}}" alt="">
                 <div class="icons">
                     <a href="#" class="fas fa-heart"></a>
                     <a href="#" class="cart-btn">add to cart</a>
@@ -178,7 +178,7 @@
         <div class="box">
             <span class="discount">-20%</span>
             <div class="image">
-                <img src="images/img-4.jpg" alt="">
+                <img src="{{asset('template/images/img-4.jpg')}}" alt="">
                 <div class="icons">
                     <a href="#" class="fas fa-heart"></a>
                     <a href="#" class="cart-btn">add to cart</a>
@@ -194,7 +194,7 @@
         <div class="box">
             <span class="discount">-17%</span>
             <div class="image">
-                <img src="images/img-5.jpg" alt="">
+                <img src="{{asset('template/images/img-5.jpg')}}" alt="">
                 <div class="icons">
                     <a href="#" class="fas fa-heart"></a>
                     <a href="#" class="cart-btn">add to cart</a>
@@ -210,7 +210,7 @@
         <div class="box">
             <span class="discount">-3%</span>
             <div class="image">
-                <img src="images/img-6.jpg" alt="">
+                <img src="{{asset('template/images/img-6.jpg')}}" alt="">
                 <div class="icons">
                     <a href="#" class="fas fa-heart"></a>
                     <a href="#" class="cart-btn">add to cart</a>
@@ -226,7 +226,7 @@
         <div class="box">
             <span class="discount">-18%</span>
             <div class="image">
-                <img src="images/img-7.jpg" alt="">
+                <img src="{{asset('template/images/img-7.jpg')}}" alt="">
                 <div class="icons">
                     <a href="#" class="fas fa-heart"></a>
                     <a href="#" class="cart-btn">add to cart</a>
@@ -242,7 +242,7 @@
         <div class="box">
             <span class="discount">-10%</span>
             <div class="image">
-                <img src="images/img-8.jpg" alt="">
+                <img src="{{asset('template/images/img-8.jpg')}}" alt="">
                 <div class="icons">
                     <a href="#" class="fas fa-heart"></a>
                     <a href="#" class="cart-btn">add to cart</a>
@@ -258,7 +258,7 @@
         <div class="box">
             <span class="discount">-5%</span>
             <div class="image">
-                <img src="images/img-9.jpg" alt="">
+                <img src="{{asset('template/images/img-9.jpg')}}" alt="">
                 <div class="icons">
                     <a href="#" class="fas fa-heart"></a>
                     <a href="#" class="cart-btn">add to cart</a>
@@ -277,77 +277,6 @@
 
 <!-- prodcuts section ends -->
 
-<!-- review section starts  -->
-
-<section class="review" id="review">
-
-<h1 class="heading"> customer's <span>review</span> </h1>
-
-<div class="box-container">
-
-    <div class="box">
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
-        <div class="user">
-            <img src="images/pic-1.png" alt="">
-            <div class="user-info">
-                <h3>john deo</h3>
-                <span>happy customer</span>
-            </div>
-        </div>
-        <span class="fas fa-quote-right"></span>
-    </div>
-
-    <div class="box">
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
-        <div class="user">
-            <img src="images/pic-2.png" alt="">
-            <div class="user-info">
-                <h3>john deo</h3>
-                <span>happy customer</span>
-            </div>
-        </div>
-        <span class="fas fa-quote-right"></span>
-    </div>
-
-    <div class="box">
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
-        <div class="user">
-            <img src="images/pic-3.png" alt="">
-            <div class="user-info">
-                <h3>john deo</h3>
-                <span>happy customer</span>
-            </div>
-        </div>
-        <span class="fas fa-quote-right"></span>
-    </div>
-
-</div>
-    
-</section>
-
-<!-- review section ends -->
-
 <!-- contact section starts  -->
 
 <section class="contact" id="contact">
@@ -365,7 +294,7 @@
         </form>
 
         <div class="image">
-            <img src="images/contact-img.svg" alt="">
+            <img src="{{asset('template/images/contact-img.svg')}}" alt="">
         </div>
 
     </div>
@@ -397,24 +326,16 @@
         </div>
 
         <div class="box">
-            <h3>locations</h3>
-            <a href="#">india</a>
-            <a href="#">USA</a>
-            <a href="#">japan</a>
-            <a href="#">france</a>
-        </div>
-
-        <div class="box">
             <h3>contact info</h3>
             <a href="#">+123-456-7890</a>
             <a href="#">example@gmail.com</a>
             <a href="#">mumbai, india - 400104</a>
-            <img src="images/payment.png" alt="">
+            <img src="{{asset('template/images/payment.png')}}" alt="">
         </div>
 
     </div>
 
-    <div class="credit"> created by <span> mr. web designer </span> | all rights reserved </div>
+    <div class="credit"> created by <span> Mayymay Florist </span> | @2022 </div>
 
 </section>
 

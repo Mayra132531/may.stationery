@@ -15,7 +15,7 @@ class CreateTransaksiTable extends Migration
     {
         Schema::create('transaksi', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('id_pembeli');
+            $table->unsignedBigInteger('id_users');
             $table->unsignedBigInteger('id_produk');
             $table->unsignedBigInteger('id_order');
             $table->string('total_transaksi');
@@ -23,7 +23,7 @@ class CreateTransaksiTable extends Migration
             $table->enum('status_byr', ['sudah', 'belum']);
             $table->string('ket');
             
-            $table->foreign('id_pembeli')->references('id')->on('pembeli');
+            $table->foreign('id_users')->references('id')->on('users');
             $table->foreign('id_produk')->references('id')->on('produk');
             $table->foreign('id_order')->references('id')->on('order');
 
