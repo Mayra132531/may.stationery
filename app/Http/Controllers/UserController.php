@@ -38,7 +38,7 @@ class UserController extends Controller
         $data = $request->all();
         $validasi = Validator::make($data,[
             'name'=>'required|max:255',
-            'email'=>'required|email|max:255|unique:users',
+            'email'=>'required|email|max:255',
             'level'=>'required|max:255',
             'password'=>'required|min:8',
 
@@ -66,7 +66,7 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
-        return view('user.show',compact('user'));
+        return view('User.show',compact('user'));
     }
     
     

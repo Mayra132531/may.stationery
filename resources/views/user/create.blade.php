@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('title')
-Pelanggan
+Admin
 @endsection
 
 <!-- ini untuk isi home -->
@@ -11,46 +11,49 @@ Pelanggan
             <div class="col-xl-8">
                 <div class="card">
                     <div class="card-body">
-                                        {{-- @include('alert.eror') --}}
-                        <h4 class="card-title">Pelanggan</h4>
-                        <form class="custom-validation" method="POST" action="{{ route('pelanggan.store') }}" novalidate="">
-                            @csrf
-                            <div class="mb-3">
-                                <label>Name</label>
-                                <input type="text" name="name" class="form-control" required="" placeholder="Silahkan input nama">
-                            </div>
-                            <div class="mb-3">
-                                <label>No Hp</label>
-                                <div>
-                                    <input type="email" name="no_telp" class="form-control" required="" parsley-type="no_telp" placeholder="Silahkan masukan email yang benar">
-                                </div>
-                                <div class="mb-3">
-                                    <label>Jenis Kelamin</label>
-                                    <input type="text" name="jenis_kelamin" class="form-control" required="" placeholder="Silahkan input jenis kelamin">
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label>Password</label>
-                                <div>
-                                    <input parsley-type="url" type="password" name="password" class="form-control" required="">
-                                </div>
-                            </div>
-                            <div class="mb-0">
-                                <div>
-                                    <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
-                                        Tambah
-                                    </button>
-                                     <button type="reset" class="btn btn-secondary waves-effect">
-                                        Cancel
-                                     </button>
-                                </div>
-                            </div>
-                        </form>
+                        <h2 class="text-center">Tambah Admin</h2>
+                                        <form class="custom-validation" action="{{ route('user.store') }}" method="POST"  novalidate="">
+                                            @csrf
+                                            <div class="mb-3">
+                                                <label>Nama</label>
+                                                <input type="text" class="form-control" required="" placeholder="silahkan masukan nama" name="name">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label>E-Mail</label>
+                                                <div>
+                                                    <input type="email" class="form-control" required="" name="email" parsley-type="Email" placeholder="silahkan masukkan email yg benar">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label>Level</label>
+                                                <select name="level" class="form-select" aria-label="Default select example">
+                                                    <option selected="">Pilih Level</option>
+                                                    <option value="1">Admin</option>
+                                                    <option value="2">Pelanggan</option>
+                                                    </select>
+                                            </div>
 
-                    </div>
-                </div> <!-- container-fluid -->
-            </div>
-        </div> <!-- page-content -->
-    </div> <!-- main-content -->
-</div>
+                                            <div class="mb-3">
+                                                <label>Password</label>
+                                                <div>
+                                                    <input type="password" class="form-control" required="" name="password" parsley-type="Password" placeholder="silahkan masukkan Password">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="mb-0">
+                                                <div>
+                                                    <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
+                                                        Submit
+                                                    </button>
+                                                    <button type="reset" class="btn btn-secondary waves-effect">
+                                                        Cancel
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+        
+                                    </div>
+                                    </div> <!-- container-fluid -->
+    </div> <!-- page-content -->
+    </div> <!-- main-content --> 
 @endsection
