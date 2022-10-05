@@ -15,11 +15,12 @@ class CreateProdukTable extends Migration
     {
         Schema::create('produk', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama_produk');
-            $table->string('harga');
+            $table->string('nama');
             $table->string('stok');
+            $table->string('harga');
 
             $table->timestamps();
+            
         });
     }
 

@@ -23,6 +23,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' =>['auth']], function(){
 // Crud user
 Route::resource('user','UserController');
+Route::resource('pelanggan','PelangganController');
+Route::resource('order','OrderController');
+Route::resource('produk','ProdukController');
+Route::resource('transaksi','TransaksiController');
 
+
+Route::get('/laporan', 'LaporanController@index');
+Route::get('/laporan/print', 'LaporanController@print');
+Route::get('/laporan/export_excel', 'LaporanController@export_excel');
 
 });

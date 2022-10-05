@@ -14,18 +14,14 @@ class CreateTransaksiTable extends Migration
     public function up()
     {
         Schema::create('transaksi', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('id_users');
-            $table->unsignedBigInteger('id_produk');
+            $table->bigIncrements('id_transaksi');
+            $table->unsignedBigInteger('id');
             $table->unsignedBigInteger('id_order');
-            $table->string('total_transaksi');
             $table->enum('jenis_pmbyr', ['atm', 'cod']);
-            $table->enum('status_byr', ['sudah', 'belum']);
-            $table->string('ket');
+            $table->enum('status', ['sudah', 'belum']);
             
-            $table->foreign('id_users')->references('id')->on('users');
-            $table->foreign('id_produk')->references('id')->on('produk');
-            $table->foreign('id_order')->references('id')->on('order');
+            $table->foreign('id')->references('id')->on('produk')->onDelete('cascade');
+            $table->foreign('id_order')->references('id_order')->on('order')->onDelete('cascade');
 
             $table->timestamps();
         });

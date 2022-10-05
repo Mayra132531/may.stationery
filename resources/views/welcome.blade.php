@@ -23,7 +23,7 @@
     <input type="checkbox" name="" id="toggler">
     <label for="toggler" class="fas fa-bars"></label>
 
-    <a href="#" class="logo">flower<span>.</span></a>
+    <a href="#" class="logo">Stationery<span>.</span></a>
 
     <nav class="navbar">
         <a href="#home">home</a>
@@ -43,9 +43,9 @@
 <section class="home" id="home">
 
     <div class="content">
-        <h3>fresh flowers</h3>
-        <span> natural & beautiful flowers </span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae laborum ut minus corrupti dolorum dolore assumenda iste voluptate dolorem pariatur.</p>
+        <h3>Stationery</h3>
+        <span> Stationery yang murah dan terjangkau</span>
+        <p>Cari kebutuhan alat tulis dan lainnya di web ini, terjamin kualitas dan harganya</p>
         <a href="{{ route('login') }}" class="btn">shop now</a>
     </div>
     

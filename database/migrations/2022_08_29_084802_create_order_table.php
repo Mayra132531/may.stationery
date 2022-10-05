@@ -14,14 +14,12 @@ class CreateOrderTable extends Migration
     public function up()
     {
         Schema::create('order', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('id_produk');
-            $table->unsignedBigInteger('nama_produk');
-            $table->string('total_order');
+            $table->bigIncrements('id_order');
+            $table->unsignedBigInteger('id');
+            $table->string('qty');
             $table->string('harga');
 
-            $table->foreign('id_produk')->references('id')->on('produk');
-            $table->foreign('nama_produk')->references('id')->on('produk');
+            $table->foreign('id')->references('id')->on('produk')->onDelete('cascade');
 
             $table->timestamps();
         });

@@ -14,12 +14,13 @@ class CreateLaporanTable extends Migration
     public function up()
     {
         Schema::create('laporan', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_lap');
+            $table->unsignedBigInteger('id');
             $table->unsignedBigInteger('id_transaksi');
-            $table->string('total_pembeli');
-            $table->string('total_transaksi');
+            $table->string('tanggal');
 
-            $table->foreign('id_transaksi')->references('id')->on('transaksi');
+            $table->foreign('id_transaksi')->references('id_transaksi')->on('transaksi')->onDelete('cascade');
+            $table->foreign('id')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps();
         });

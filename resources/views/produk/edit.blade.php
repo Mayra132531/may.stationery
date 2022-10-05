@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('title')
-User
+Produk
 @endsection
 
 <!-- ini untuk isi home -->
@@ -13,7 +13,7 @@ User
         <div class="col-xl-8">
                 <div class="card">
                 <div class="card-body">
-                <h4 class="card-title">Edit User</h4>
+                <h4 class="card-title">Edit Produk</h4>
 
                                                 @if ($errors->any())
                                                 <div class="alert alert-danger">
@@ -24,36 +24,27 @@ User
                                                      </ul>
                                                 </div>
                                                 @endif
-                                        <form class="custom-validation" method="POST" action="{{ route('user.update',[$user->id]) }}" novalidate="">
+                                        <form class="custom-validation" method="POST" action="{{ route('produk.update',[$produk->id]) }}" novalidate="">
                                             @csrf
                                             {{ method_field('PUT') }}
 
                                                 
 
                                             <div class="mb-3">
-                                                <label>Name</label>
-                                                <input type="text" name="name" class="form-control" required="" value="{{ $user->name }}">
+                                                <label>Nama Produk</label>
+                                                <input type="text" name="nama" class="form-control" required="" value="{{ $produk->nama_produk }}">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label>Stok</label>
+                                                <input type="text" name="stok" class="form-control" required="" value="{{ $produk->stok }}">
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>E-Mail</label>
+                                                <label>Harga</label>
                                                 <div>
-                                                    <input type="email" name="email" class="form-control" required="" parsley-type="email" value="{{ $user->email}}">
+                                                    <input type="text" name="harga" class="form-control" required="" parsley-type="harga" value="{{ $produk->harga}}">
                                                 </div>
                                             </div>
-                                            <div class="mb-3">
-                                                <label>Level</label>
-                                                <select name="level" class="form-control">
-                                                            <option value="opt1">Select One Value Only</option>
-                                                            <option value="admin" @if($user->level == "admin") selected @endif>Admin</option>
-                                                            <option value="pelanggan" @if($user->level == "pelanggan") selected @endif>Pelanggan</option>
-                                                        </select>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label>Password</label>
-                                                <input type="password" name="password" class="form-control" required="" value="">
-                                            </div>
-
                                             
                                             <div class="mb-0">
                                                 <div>
