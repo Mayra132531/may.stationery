@@ -14,7 +14,7 @@ Laporan
                                             </div>
                                             <div class="ml-3">
                                                 <!--a class="btn btn-info waves-effect waves-light" href="/laporan/create" role="button"> Create (+)</a>-->
-                                                <a href="/laporan/print" class="btn btn-primary" target="_blank">PDF</a>
+                                                <a href="/laporan/pdf" class="btn btn-primary" target="_blank">CETAK PDF</a>
                                                 <a href="/laporan/export_excel" class="btn btn-success my-3" target="_blank">EXCEL</a>
 
                                                 </p>
@@ -40,7 +40,7 @@ Laporan
                                                             <td>{{ $loop->iteration + ($laporan->perpage() *  ($laporan->currentPage() -1)) }}</td>  
                                                             <td>{{ $row->user->name}}</td>
                                                             <td>{{$row->id_transaksi}}</td>
-                                                            <td>{{ optional($row->transaksi)->status}}</td>
+                                                            <td>{{ $row->transaksi->status}}</td>
                                                             <td>{{ $row->tanggal}}</td>
                         
                                                             <td>

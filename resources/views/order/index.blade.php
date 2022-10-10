@@ -72,14 +72,14 @@ Order
                         <td>{{ $row->harga }}</td>
                         
                         <td>
-                        <form method="post" action="{{ route('order.destroy',[$row->id_order]) }}" onsubmit="return confirm('Are you sure to delete, {{$row->produk->nama}}?')">
+                        <form action="{{ url('order/'.$row->id) }}" method="POST">
                                 @csrf
-                            {{ method_field('DELETE') }}
+                                <input type="hidden" name="_method" value="DELETE">
                             <a class="btn btn-outline-secondary btn-sm edit" href="{{ route('order.edit',[$row->id_order]) }}" title="Edit">
                              <i class="fas fa-pencil-alt"></i>
                              </a>
 
-                             <button type="submit" href="{{ route('logout') }}" class="btn btn-outline-secondary btn-sm edit">
+                             <button type="submit"  class="btn btn-outline-secondary btn-sm edit">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
 

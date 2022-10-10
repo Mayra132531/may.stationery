@@ -17,7 +17,8 @@ class CreateLaporanTable extends Migration
             $table->bigIncrements('id_lap');
             $table->unsignedBigInteger('id');
             $table->unsignedBigInteger('id_transaksi');
-            $table->string('tanggal');
+            $table->enum('status', ['sudah', 'belum']);
+            $table->date('tanggal');
 
             $table->foreign('id_transaksi')->references('id_transaksi')->on('transaksi')->onDelete('cascade');
             $table->foreign('id')->references('id')->on('users')->onDelete('cascade');

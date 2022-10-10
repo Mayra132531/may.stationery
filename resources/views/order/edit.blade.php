@@ -1,3 +1,4 @@
+
 @extends('layouts.template')
 @section('title')
 Order
@@ -15,32 +16,26 @@ Order
                 <div class="card-body">
                 <h4 class="card-title">Edit Order</h4>
 
-                                                @if ($errors->any())
-                                                <div class="alert alert-danger">
-                                                <ul>
-                                                @foreach ($errors->all() as $error)
-                                                    <li>{{ $error }}</li>
-                                                @endforeach
-                                                     </ul>
-                                                </div>
-                                                @endif
-                                        <form class="custom-validation" method="POST" action="{{ route('order.update',[$order->id]) }}" novalidate="">
+
+                                        <form class="custom-validation" method="POST" action="{{ route('order.update', $order->id_order) }}" novalidate="">
                                             @csrf
                                             {{ method_field('PUT') }}
 
+
                                             <div class="mb-3">
-                                                <label>Id Produk</label>
-                                                <input type="text" name="id" class="form-control" required="" value="{{ $order->id }}">
+                                                <label>Nama Produk</label>
+                                                <input type="text" name="id" class="form-control" required="" value="{{ $order->produk->nama }}">
                                             </div>
                                             <div class="mb-3">
                                                 <label>Qty</label>
-                                                <input type="text" class="form-control" required=""  name="qty" value="{{ $order->qty }}">
-                                            </div>
+                                                <input type="text" name="qty" class="form-control" required="" value="{{ $order->qty }}">
+                                            </div> 
                                             <div class="mb-3">
                                                 <label>Harga</label>
-                                                <input type="text" class="form-control" required=""  name="harga" value="{{ $order->harga }}">
+                                                <input type="text" name="harga" class="form-control" required="" value="{{ $order->harga }}">
                                             </div>
-                                            
+                                        
+
                                             <div class="mb-0">
                                                 <div>
                                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">

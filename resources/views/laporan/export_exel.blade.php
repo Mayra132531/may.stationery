@@ -13,8 +13,7 @@
         <tr>
         <td>{{$row->id_lap}}</td>
         <td>{{ $row->user->name}}</td>
-        <td>{{$row->id_transaksi}}</td>
-        <td>{{ optional($row->transaksi)->status}}</td>
+        <td>{{ $row->transaksi->status}}</td>
         <td>{{ $row->tanggal}}</td>
         </tr>
         @endforeach

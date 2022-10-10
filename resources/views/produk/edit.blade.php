@@ -32,7 +32,7 @@ Produk
 
                                             <div class="mb-3">
                                                 <label>Nama Produk</label>
-                                                <input type="text" name="nama" class="form-control" required="" value="{{ $produk->nama_produk }}">
+                                                <input type="text" name="nama" class="form-control" required="" value="{{ $produk->nama }}">
                                             </div>
                                             <div class="mb-3">
                                                 <label>Stok</label>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LaporanController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,7 +32,7 @@ Route::resource('transaksi','TransaksiController');
 
 
 Route::get('/laporan', 'LaporanController@index');
-Route::get('/laporan/print', 'LaporanController@print');
+Route::get('/laporan/pdf', 'LaporanController@pdf');
 Route::get('/laporan/export_excel', 'LaporanController@export_excel');
 
 });
